@@ -12,3 +12,5 @@ print(apersonen*amin*vr_5min)
 vraantal=49.95
 print(personenaantal+vraantal)
 totaal_bedrag=72.30
+
+print("Dit geweldige dagje-uit met ",apersonen,"in de Speelhal met ",amin," kost je maar ",totaal_bedrag," euro")
