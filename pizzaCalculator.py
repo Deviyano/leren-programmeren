@@ -1,7 +1,9 @@
 from ast import If
 from logging.handlers import TimedRotatingFileHandler
 import math
-
+#Deviyano Acosta 
+#990874836
+#opdracht pizzacalculator
 small=6.99
 medium=9.99
 large=12.99
@@ -21,3 +23,4 @@ if keuze =="large":
 print(" ----------------------------")   
 print("|uw totale bedrag is",prijs," |")
 print(" ----------------------------") 
+
