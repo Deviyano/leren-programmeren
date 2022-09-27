@@ -5,6 +5,10 @@ print("-----------------------------------------------------")
 naam = input ("wat is uw naam? ")
 if naam == "gandolf" :
     raise NameError("YOU SHALL NOT PASS")
+if naam == "vader" :
+    raise NameError("Luke i am your father")
+if naam == "bob" :
+    raise NameError("hoeveel gebouwen heb je al gemaakt")
 ervaring = input ("heeft u ervaring met dieren-jongleren of acrobatiek")
 jaar = input ("Hoeveel jaar ervaring heeft u? ")
 diploma = input ("heeft u een mbo diploma? ")
