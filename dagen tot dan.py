@@ -1,4 +1,4 @@
-dag=input("welke dag is het vandaag")
+dag=input("welke dag is het vandaag: ")
 ma="maandag"
 di="dinsdag"
 wo="woensdag"
