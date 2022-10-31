@@ -5,39 +5,39 @@ from multiprocessing.resource_sharer import stop
 #Deviyano Acosta 
 #990874836
 #opdracht pizzacalculator
-small=6.99
-medium=9.99
-large=12.99
+small=6,99
+medium=9,99
+large=12,99
 
 keuze = input("Wilt u een small of medium of large pizza :")
 aantal = input("hoeveel pizza's wilt u :")
-if aantal == "" :
+elif aantal == "" :
     print("error")
 
 
-if keuze == "small":
+elif keuze == "small":
     try: 
-        prijs = int (aantal)*6.99
+        prijs == str (aantal)*6,99
     except:
         print("dat is geen prijs")
         stop
 
-if keuze == "medium":
+elif keuze == "medium":
     try: 
-        prijs = int (aantal)*9.99
+        prijs == str (aantal)*9,99
     except:
         print("dat is geen prijs")
         stop
     
-if keuze =="large":
+elif keuze =="large":
     try: 
-     prijs= int (aantal)*12.99
+     prijs== str (aantal)*12,99
     except:
         print("dat is geen prijs")
         stop
 
 
 print(" ----------------------------")   
-print("|uw totale bedrag is",prijs," |")
+print("|uw totale bedrag is"+prijs+" |")
 print(" ----------------------------") 
 
