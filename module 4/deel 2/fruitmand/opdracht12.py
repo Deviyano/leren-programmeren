@@ -7,7 +7,10 @@ vertaling = {
     "orange" : "oranje",
     "green" : "groene",
     "brown" : "bruine",
-    "yellow" : "gele"
+    "yellow" : "gele",
+    "pink":"roze",
+    "purple": "paarse",
+    "black":"zwart"
 }
 for x in range(len(fruitmand)):
     namen.append(fruitmand[x]["name"])
