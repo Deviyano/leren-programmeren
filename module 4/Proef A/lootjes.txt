@@ -1,0 +1,10 @@
+naam = input ("Geef een naam op: ")
+ik maak een list aan en als daar niet 3 namen in zitten stelt hij de vraag opnieuw tot er 3 namen in zitten
+als er wel 3 namen zijn gaat de code verder
+als ze in de lijst staan gaat hij terug naar de vaag naam zo niet gaat hij verder
+zitten ze er niet in gaat hij naar de volgede vraag
+extra = input ("wil je nog meer namen toevoegen: ")
+als het antwoord bij extra ja is gaat hij terug naar naam
+als het antwoord bij extra nee is gaat de code verder met het trekken van de lootjes
+tijdens het trekken van de lootje worden alle namen ge print met een bijbehorend
+maar je kan niet jezelf krijgen als lootje altijd iemand anders
