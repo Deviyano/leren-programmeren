@@ -10,5 +10,4 @@ def reeks(aantal:int):
         getal1=(getal1-getal1)+totaal
         totaal=0
     print(cijfers)
-    return cijfers
-reeks(11)
+reeks(10)
