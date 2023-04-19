@@ -18,7 +18,8 @@ totalenprijzen={
 "prijsbol":0,
 "prijshoorn":0,
 "prijsbak":0,
-"prijstopping":0
+"prijstopping":0,
+"btw":0
 }
 
 smaken = {

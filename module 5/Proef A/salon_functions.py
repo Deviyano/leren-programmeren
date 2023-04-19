@@ -112,6 +112,8 @@ def bon(totalenprijzen, klant:str):
                 print("Toppings:                =" ,"{:,.2f}".format(totalenprijzen["prijstopping"]))
     print("               --------------- +")
     print("Totaal:                 ","{:,.2f}".format(totalenprijzen["totaal"]))
+    if totalenprijzen["btw"]:
+        print("BTW (9%):                 ","{:,.2f}".format(totalenprijzen["btw"]))
     print("-------------------------------")
 
 def smaak(aantal:int,klant:str):
@@ -180,3 +182,4 @@ def liter_berekenen():
     totaal_smaken["Munt"]=prijzen["liter"]*smaken["Munt"]
     totaal_smaken["Vanille"]=prijzen["liter"]*smaken["Vanille"]
     totalenprijzen["totaal"]=totaal_smaken["Aardbei"]+totaal_smaken["Chocolade"]+totaal_smaken["Munt"]+totaal_smaken["Vanille"]
+    totalenprijzen["btw"]=(totalenprijzen["totaal"]/109)*9
