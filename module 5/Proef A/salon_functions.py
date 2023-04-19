@@ -9,10 +9,10 @@ def bolletjes(klant:str):
                 try:
                     aantal_liter=int(input("Hoeveel liter aan ijs wilt u?: "))
                 except:
-                    print("Sorry dat snap ik niet...")
+                    print("Sorry dat is geen optie die we aanbieden...")
                     continue 
                 if aantal_liter <= 0:
-                    print("Sorry dat snap ik niet...")
+                    print("Sorry dat is geen optie die we aanbieden...")
                     continue
                 else:
                     return aantal_liter
@@ -21,7 +21,7 @@ def bolletjes(klant:str):
             try:
                 aantal=int(input("Hoeveel bolletjes wilt u?: "))
             except:
-                print("Sorry dat snap ik niet...")
+                print("Sorry dat is geen optie die we aanbieden...")
                 continue
 
             if aantal >= 1 and aantal <= 3:
@@ -35,7 +35,7 @@ def bolletjes(klant:str):
                 continue
 
             else:
-                print("Sorry dat snap ik niet...")
+                print("Sorry dat is geen optie die we aanbieden...")
                 continue    
 
 def verpakking(aantal:int):
@@ -48,7 +48,7 @@ def verpakking(aantal:int):
             if keuze == "bakje":
                 return keuze
             else:
-                print("Sorry dat snap ik niet...")
+                print("Sorry dat is geen optie die we aanbieden...")
                 continue      
         else:
             return "bakje"
@@ -62,7 +62,7 @@ def meer_bestellen():
         if meer == "nee":
             return False
         else:
-            print("Sorry dat snap ik niet...")
+            print("Sorry dat is geen optie die we aanbieden...")
 
 def hier_is_uw_ijsje(aantal:int,keuze:str):
     print("Hier is uw ",keuze," met",aantal,"bolletje(s).")
@@ -80,7 +80,6 @@ def totaalprijs(keuze,aantal,topping_keuze):
     totalenprijzen["prijstopping"]=totaal_toppings["Slagroom"]+totaal_toppings["Sprinkels"]+totaal_toppings["Caramel"]
     totaal_smaken["Aardbei"]=smaken["Aardbei"]*prijzen["Bollentjes"]
     totaal_smaken["Chocolade"]=smaken["Chocolade"]*prijzen["Bollentjes"]
-    totaal_smaken["Munt"]=smaken["Munt"]*prijzen["Bollentjes"]
     totaal_smaken["Vanille"]=smaken["Vanille"]*prijzen["Bollentjes"]
 
     
@@ -91,8 +90,6 @@ def bon(totalenprijzen, klant:str):
             print("L.Aardbei:       ",smaken["Aardbei"],"X","{:,.2f}".format(prijzen["liter"]),"=","{:,.2f}".format(totaal_smaken["Aardbei"]))
         if smaken["Chocolade"] >=1:
             print("L.Chocolade:     ",smaken["Chocolade"],"X","{:,.2f}".format(prijzen["liter"]),"=","{:,.2f}".format(totaal_smaken["Chocolade"]))
-        if smaken["Munt"] >=1:
-            print("L.Munt:          ",smaken["Munt"],"X","{:,.2f}".format(prijzen["liter"]),"=","{:,.2f}".format(totaal_smaken["Munt"]))
         if smaken["Vanille"] >=1:
             print("L.Vanille:       ",smaken["Vanille"],"X","{:,.2f}".format(prijzen["liter"]),"=","{:,.2f}".format(totaal_smaken["Vanille"]))
     else:
@@ -100,8 +97,6 @@ def bon(totalenprijzen, klant:str):
             print("B.Aardbei:       ",smaken["Aardbei"],"X","{:,.2f}".format(prijzen["Bollentjes"]),"=","{:,.2f}".format(totaal_smaken["Aardbei"]))
         if smaken["Chocolade"] >=1:
             print("B.Chocolade:     ",smaken["Chocolade"],"X","{:,.2f}".format(prijzen["Bollentjes"]),"=","{:,.2f}".format(totaal_smaken["Chocolade"]))
-        if smaken["Munt"] >=1:
-            print("B.Munt:          ",smaken["Munt"],"X","{:,.2f}".format(prijzen["Bollentjes"]),"=","{:,.2f}".format(totaal_smaken["Munt"]))
         if smaken["Vanille"] >=1:
             print("B.Vanille:       ",smaken["Vanille"],"X","{:,.2f}".format(prijzen["Bollentjes"]),"=","{:,.2f}".format(totaal_smaken["Vanille"]))
         if aantalen["Horentjes"] >=1:
@@ -113,7 +108,7 @@ def bon(totalenprijzen, klant:str):
     print("               --------------- +")
     print("Totaal:                 ","{:,.2f}".format(totalenprijzen["totaal"]))
     if totalenprijzen["btw"]:
-        print("BTW (9%):                 ","{:,.2f}".format(totalenprijzen["btw"]))
+        print("BTW (6%):                 ","{:,.2f}".format(totalenprijzen["btw"]))
     print("-------------------------------")
 
 def smaak(aantal:int,klant:str):
@@ -121,9 +116,9 @@ def smaak(aantal:int,klant:str):
     for x in range(1,aantal+1):
         while opnieuw==True:
             if klant == "particulier":
-                smaak_keuze=input("Welke smaak wilt u voor bolletje nummer "+str(x)+" ? A) Aardbei, C) Chocolade, M) Munt of V) Vanille?:  ").lower()
+                smaak_keuze=input("Welke smaak wilt u voor bolletje nummer "+str(x)+" ? A) Aardbei, C) Chocolade of V) Vanille?:  ").lower()
             if klant == "zakelijk":
-                smaak_keuze=input("Welke smaak wilt u voor liter nummer "+str(x)+" ? A) Aardbei, C) Chocolade, M) Munt of V) Vanille?:  ").lower()
+                smaak_keuze=input("Welke smaak wilt u voor liter nummer "+str(x)+" ? A) Aardbei, C) Chocolade of V) Vanille?:  ").lower()
             if smaak_keuze == "a":
                 smaken["Aardbei"]=smaken["Aardbei"]+1
                 break
@@ -132,16 +127,12 @@ def smaak(aantal:int,klant:str):
                 smaken["Chocolade"]=smaken["Chocolade"]+1
                 break
 
-            if smaak_keuze == "m":
-                smaken["Munt"]=smaken["Munt"]+1
-                break
-
             if smaak_keuze == "v":
                 smaken["Vanille"]=smaken["Vanille"]+1
                 break
 
             else:
-                print("Sorry dat snap ik niet...")
+                print("Sorry dat is geen optie die we aanbieden...")
                 continue
 
 def toppings():
@@ -160,7 +151,7 @@ def toppings():
             aantal_toppings["Caramel"]=aantal_toppings["Caramel"]+1
             return "Caramel"
         else:
-            print("Sorry dat snap ik niet...")
+            print("Sorry dat is geen optie die we aanbieden...")
             continue
 def de_klant():
     while True:
@@ -173,13 +164,12 @@ def de_klant():
             return "zakelijk"
         
         else:
-            print("Sorry dat snap ik niet...")
+            print("Sorry dat is geen optie die we aanbieden...")
             continue
 
 def liter_berekenen():
     totaal_smaken["Aardbei"]=prijzen["liter"]*smaken["Aardbei"]
     totaal_smaken["Chocolade"]=prijzen["liter"]*smaken["Chocolade"]
-    totaal_smaken["Munt"]=prijzen["liter"]*smaken["Munt"]
     totaal_smaken["Vanille"]=prijzen["liter"]*smaken["Vanille"]
-    totalenprijzen["totaal"]=totaal_smaken["Aardbei"]+totaal_smaken["Chocolade"]+totaal_smaken["Munt"]+totaal_smaken["Vanille"]
-    totalenprijzen["btw"]=(totalenprijzen["totaal"]/109)*9
+    totalenprijzen["totaal"]=totaal_smaken["Aardbei"]+totaal_smaken["Chocolade"]+totaal_smaken["Vanille"]
+    totalenprijzen["btw"]=(totalenprijzen["totaal"]/106)*6

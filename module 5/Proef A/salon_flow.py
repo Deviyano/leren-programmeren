@@ -33,5 +33,5 @@ while door_bestellen==True:
         break
 
 if klant == "particulier":
-    totalenprijzen["totaal"]=totaal_smaken["Aardbei"]+totaal_smaken["Chocolade"]+totaal_smaken["Munt"]+totaal_smaken["Vanille"]+totalenprijzen["prijshoorn"]+totalenprijzen["prijsbak"]+totalenprijzen["prijstopping"]
+    totalenprijzen["totaal"]=totaal_smaken["Aardbei"]+totaal_smaken["Chocolade"]+totaal_smaken["Vanille"]+totalenprijzen["prijshoorn"]+totalenprijzen["prijsbak"]+totalenprijzen["prijstopping"]
 bon(totalenprijzen,klant)

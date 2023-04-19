@@ -1,5 +1,5 @@
 prijzen = {
-"Bollentjes":1.10,
+"Bollentjes":0.95,
 "Horentjes":1.25,
 "Bakjes":0.75,
 "Slagroom": 0.50,
@@ -25,7 +25,6 @@ totalenprijzen={
 smaken = {
    "Aardbei":0,
    "Chocolade":0,
-   "Munt":0,
    "Vanille":0
 }
 
@@ -33,7 +32,6 @@ smaken = {
 totaal_smaken = {
     "Aardbei":0,
     "Chocolade":0,
-    "Munt":0,
     "Vanille":0
 }
 
