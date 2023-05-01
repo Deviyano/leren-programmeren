@@ -23,6 +23,11 @@ while door_bestellen==True:
 
         topping_keuze=toppings()
 
+        if keuze == "bakje" and topping_keuze == "Caramel":
+            print("tf")
+            totalenprijzen["prijstopping"]=totalenprijzen["prijstopping"]+0.30
+            #prijs van caramel klopt niet :(
+
         hier_is_uw_ijsje(aantal,keuze)
 
         door_bestellen=meer_bestellen()

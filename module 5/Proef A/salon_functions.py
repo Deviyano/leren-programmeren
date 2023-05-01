@@ -56,7 +56,7 @@ def verpakking(aantal:int):
 def meer_bestellen():
     opnieuw=True
     while opnieuw==True:
-        meer=input("Wilt u nog meer bestellen? (ja/nee): ")
+        meer=input("Wilt u nog meer bestellen? (ja/nee): ").lower()
         if meer == "ja":
             return True
         if meer == "nee":
@@ -75,13 +75,10 @@ def totaalprijs(keuze,aantal,topping_keuze):
     if aantal_toppings["Sprinkels"] >= 1:
         totaal_toppings["Sprinkels"]=totaal_toppings["Sprinkels"]+aantal*prijzen["Sprinkels"]
     totaal_toppings["Caramel"]=aantal_toppings["Caramel"]*prijzen["Caramel"]
-    if keuze == "bakje" and topping_keuze == "Caramel":
-            totaal_toppings["Caramel"]= totaal_toppings["Caramel"]+0.30
-    totalenprijzen["prijstopping"]=totaal_toppings["Slagroom"]+totaal_toppings["Sprinkels"]+totaal_toppings["Caramel"]
+    totalenprijzen["prijstopping"]=totalenprijzen["prijstopping"]+totaal_toppings["Slagroom"]+totaal_toppings["Sprinkels"]+totaal_toppings["Caramel"]
     totaal_smaken["Aardbei"]=smaken["Aardbei"]*prijzen["Bollentjes"]
     totaal_smaken["Chocolade"]=smaken["Chocolade"]*prijzen["Bollentjes"]
     totaal_smaken["Vanille"]=smaken["Vanille"]*prijzen["Bollentjes"]
-
     
 def bon(totalenprijzen, klant:str):
     print("---------[papi gelato]---------")
@@ -94,7 +91,7 @@ def bon(totalenprijzen, klant:str):
             print("L.Vanille:       ",smaken["Vanille"],"X","{:,.2f}".format(prijzen["liter"]),"=","{:,.2f}".format(totaal_smaken["Vanille"]))
     else:
         if smaken["Aardbei"] >=1:
-            print("B.Aardbei:       ",smaken["Aardbei"],"X","{:,.2f}".format(prijzen["Bollentjes"]),"=","{:,.2f}".format(totaal_smaken["Aardbei"]))
+            print("B.Aardbei:     ",smaken["Aardbei"],"X","{:,.2f}".format(prijzen["Bollentjes"]),"=","{:,.2f}".format(totaal_smaken["Aardbei"]))
         if smaken["Chocolade"] >=1:
             print("B.Chocolade:     ",smaken["Chocolade"],"X","{:,.2f}".format(prijzen["Bollentjes"]),"=","{:,.2f}".format(totaal_smaken["Chocolade"]))
         if smaken["Vanille"] >=1:
