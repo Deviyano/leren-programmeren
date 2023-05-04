@@ -5,7 +5,7 @@ prijzen = {
 "Slagroom": 0.50,
 "Sprinkels": 0.30,
 "Caramel":0.60,
-"liter":9.80
+"liter":9.80,
 }
 aantalen = {
 "Bollentjes":0,
@@ -44,5 +44,6 @@ aantal_toppings = {
 totaal_toppings = {
 "Slagroom": 0,
 "Sprinkels": 0,
-"Caramel":0
+"Caramel":0,
+"Cbakje":0
 }

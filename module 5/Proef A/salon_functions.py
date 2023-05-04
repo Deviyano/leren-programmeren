@@ -75,7 +75,6 @@ def totaalprijs(keuze,aantal,topping_keuze):
     if aantal_toppings["Sprinkels"] >= 1:
         totaal_toppings["Sprinkels"]=totaal_toppings["Sprinkels"]+aantal*prijzen["Sprinkels"]
     totaal_toppings["Caramel"]=aantal_toppings["Caramel"]*prijzen["Caramel"]
-    totalenprijzen["prijstopping"]=totalenprijzen["prijstopping"]+totaal_toppings["Slagroom"]+totaal_toppings["Sprinkels"]+totaal_toppings["Caramel"]
     totaal_smaken["Aardbei"]=smaken["Aardbei"]*prijzen["Bollentjes"]
     totaal_smaken["Chocolade"]=smaken["Chocolade"]*prijzen["Bollentjes"]
     totaal_smaken["Vanille"]=smaken["Vanille"]*prijzen["Bollentjes"]
@@ -150,6 +149,7 @@ def toppings():
         else:
             print("Sorry dat is geen optie die we aanbieden...")
             continue
+        
 def de_klant():
     while True:
         klant=input("Bent u 1) een particuliere klant of 2) een zakelijke klant?: ")
