@@ -40,10 +40,3 @@ if klant == "particulier":
     totalenprijzen["prijstopping"]=totaal_toppings["Slagroom"]+totaal_toppings["Sprinkels"]+totaal_toppings["Caramel"]+totaal_toppings["Cbakje"]
     totalenprijzen["totaal"]=totaal_smaken["Aardbei"]+totaal_smaken["Chocolade"]+totaal_smaken["Vanille"]+totalenprijzen["prijshoorn"]+totalenprijzen["prijsbak"]+totalenprijzen["prijstopping"]
 bon(totalenprijzen,klant)
-
-
-print(totaal_toppings["Slagroom"])
-print(totaal_toppings["Sprinkels"])
-print(totaal_toppings["Caramel"])
-print(totaal_toppings["Cbakje"])
-print(totalenprijzen["prijstopping"])
